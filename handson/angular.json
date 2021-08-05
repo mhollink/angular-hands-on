@@ -64,6 +64,10 @@
               "browserTarget": "client:build:development"
             }
           },
+          "options": {
+            "browserTarget": "client:build",
+            "proxyConfig": "./proxy.conf.json"
+          },
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
