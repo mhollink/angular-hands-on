@@ -1,0 +1,31 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Log in</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form class="login-form" [formGroup]="form">
+      <mat-form-field appearance="outline">
+        <mat-label>Username</mat-label>
+        <input matInput formControlName="username">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-error *ngIf="username?.hasError('required')">
+          A username is required
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput formControlName="password" type="password">
+        <mat-icon matSuffix>lock</mat-icon>
+        <mat-error *ngIf="password?.hasError('required')">
+          A password is required
+        </mat-error>
+      </mat-form-field>
+      <button mat-stroked-button color="accent" (click)="submit()">Log in</button>
+    </form>
+    <aside>
+      <a routerLink="/registration">
+        or register!
+      </a>
+    </aside>
+  </mat-card-content>
+</mat-card>

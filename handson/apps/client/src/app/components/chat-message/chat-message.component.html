@@ -1,0 +1,5 @@
+<div class="message" [ngClass]="message.messageType">
+        <span>
+          <strong *ngIf="message.messageType === 'received-message'"> {{ message.author }} </strong><span> {{message.text}} </span>
+        </span>
+</div>
