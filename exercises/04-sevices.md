@@ -35,7 +35,7 @@ export class UserService {
 
 In the login method we can use the http service to make a post call for the authenticate-endpoint on the server. 
 Within this method we expect to receive a username and password. To ensure that we can only accept objects with these 
-properties we can define a type.
+properties we can define a type above the class (and above the @Injectable).
 
 ```typescript
 type Credentials = {
