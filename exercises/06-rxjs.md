@@ -3,7 +3,7 @@
 To start, we need a service which connects to the websocket and handles the interactions.
 
 ```shell script
-nx g s service/chat
+nx g s services/chat
 ```
 
 This chat service will first need to connect with the web socket server and send messages over the connection. 

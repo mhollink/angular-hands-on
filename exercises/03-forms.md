@@ -2,7 +2,7 @@
 
 ## Template 
 
-Since Material is already imported in the app module we can use the `mat` components that it comes with. Let's create a card component that hold the login form.
+Since Material is already imported in the app module we can use the `mat` components that it comes with. Let's create a card component in the `login-page.component.html` which will the login form.
 
 ```html
 <mat-card>
@@ -36,6 +36,20 @@ Within the body of the card we can add the form with fields for username and pas
 The scaffolding of the login form is enough to render a neat looking form on the screen. There is some CSS in the root of the project that centers the card.
 The next step is to wire the form to the component. Angular makes this quite easy. By importing the Angular forms module we get access to a load of powerfull
 features. Within the `app.module` we import the `FormsModule` and the `ReactiveFormsModule` both coming from `@angular/forms`. 
+
+```ts
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+
+@NgModule({
+  imports: [
+    FormsModule,
+    ReactiveFormsModule
+  ]
+})
+export class AppModule {
+}
+
+```
 
 ## FormGroup
 
