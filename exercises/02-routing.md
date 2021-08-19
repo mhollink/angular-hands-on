@@ -2,8 +2,8 @@
 
 With the inspection of the files completed we can start developing the application itself. Let's start with the login-page and use what we learn on the
 registration-page. First add routing to our components. Within the `app.component.html` there exists a `<router-outlet>` which gets filled with the component in
-the given route. This means we need to tell the router module which routes there are. In the `app.component.ts` there is a constant that holds the routes. We need
-the add the login and registration page here.
+the given route. This means we need to tell the router module which routes there are. In the `app.module.ts` there is a constant which holds the routes. We need
+to add the login and registration page here.
 
 ```typescript
 const routes: Routes = [
