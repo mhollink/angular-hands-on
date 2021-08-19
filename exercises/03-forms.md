@@ -15,7 +15,7 @@ Since Material is already imported in the app module we can use the `mat` compon
 </mat-card>
 ```
 
-Within the body of the card we can the form with fields for username and password. Using the correct material directives we can also make use the material styling.
+Within the body of the card we can add the form with fields for username and password. Using the correct material directives we can also make use the material styling.
 
 ```html
  <form>
