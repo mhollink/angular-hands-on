@@ -33,7 +33,7 @@ export class UserService {
 }
 ```
 
-In the login method we can use the http service to make a post call for the authenticate endpoint on the server. 
+In the login method we can use the http service to make a post call for the authenticate-endpoint on the server. 
 Within this method we expect to receive a username and password. To ensure that we can only accept objects with these 
 properties we can define a type.
 
@@ -45,7 +45,7 @@ type Credentials = {
 ```
 
 Our login method than can take shape by expecting the arguments required to make the api-call. Using the HttpClient we
-can now post the request body in the folling way:
+can now post the request body in the following way:
 
 ```typescript
 public login({username, password}: Credentials) {
@@ -67,11 +67,12 @@ public createUser({username, password}: Credentials) {
 Earlier we created a submit method in the login page component. With our service in place we can now add the required 
 logic to authenticate and redirect. 
 
-In the component, add the UserService to the dependencies and complete the submit method.
+In the login page component, add the UserService to the dependencies and complete the submit-method.
 
 ```typescript
-constructor(private fb: FormBuilder, private user: UserService) 
-
+constructor(private fb: FormBuilder, private user: UserService) {...}
+```
+```typescript
 submit() {
     if(!this.form.valid) return;
     this.user.login(this.form.value)
